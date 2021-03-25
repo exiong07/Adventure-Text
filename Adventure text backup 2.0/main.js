@@ -47,15 +47,30 @@ function promptDayTwo() {
   } else if (userChoice != null) {
     alert("You have chosen " + userChoice);
   }
-  if (userChoice === "Casino") {
-    alert("You went to the casino and played slots!");
-    for (let i = 0; i < 10; i++) {
-      if (i === 5) {
-        alert("You won in slots!");
-        continue;
-      }
-    }
+  let gambleMac = ["slots", "spades", "poker", "dice"];
+
+  for (let i = 0; i < gambleMac.lengh; i++) {
+    let outcome = gambleMac[i];
+    console.log(outcome);
+    alert("You went to the casino and played " + outcome);
   }
+
+  if (gambleMac === "slots") {
+    alert("You won in slots! The end");
+  } else if (gambleMac === "spades") {
+    alert("You won in spades! The end");
+  } else if (gambleMac === "poker") {
+    alert("You won in poker! The end");
+  } else gambleMac === "dice";
+  {
+    alert("You won in dice! The end");
+  }
+
+  // for (let slots = 0; i < 10; i++) {
+  //   if (i === 5) {
+  //     alert("You won in slots!");
+  //     continue;
+  //   }
 
   if (userChoice === "Black Market") {
     alert(
