@@ -47,42 +47,27 @@ function promptDayTwo() {
   } else if (userChoice != null) {
     alert("You have chosen " + userChoice);
   }
+
   let gambleMac = ["slots", "spades", "poker", "dice"];
 
-  for (let i = 0; i < gambleMac.lengh; i++) {
+  for (let i = 0; i < gambleMac.length; i++) {
     let outcome = gambleMac[i];
     console.log(outcome);
-    alert("You went to the casino and played " + outcome);
-  }
+    if (userChoice === "Casino") {
+      alert("You went to the casino and gambled " + outcome);
+      alert("You won!");
+    } else if (userChoice === "Black Market") {
+      alert(
+        "You went to the Black Market and saw a muscular man standing at the door ."
+      );
 
-  if (gambleMac === "slots") {
-    alert("You won in slots! The end");
-  } else if (gambleMac === "spades") {
-    alert("You won in spades! The end");
-  } else if (gambleMac === "poker") {
-    alert("You won in poker! The end");
-  } else gambleMac === "dice";
-  {
-    alert("You won in dice! The end");
-  }
-
-  // for (let slots = 0; i < 10; i++) {
-  //   if (i === 5) {
-  //     alert("You won in slots!");
-  //     continue;
-  //   }
-
-  if (userChoice === "Black Market") {
-    alert(
-      "You went to the Black Market and saw a muscular man standing at the door ."
-    );
-
-    let secretCode = prompt("What is the secret code?");
-    while (secretCode === "chicken") {
-      alert('Guard says:"You may enter........" THE END');
-    }
-    while (secretCode != "chicken") {
-      alert("*SLAP *KICK *PUNCH You have been kidnapped......... THE END");
+      let secretCode = prompt("What is the secret code?");
+      while (secretCode === "chicken") {
+        alert('Guard says:"You may enter........" THE END');
+      }
+      while (secretCode != "chicken") {
+        alert("*SLAP *KICK *PUNCH You have been kidnapped......... THE END");
+      }
     }
   }
 }
